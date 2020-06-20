@@ -1,0 +1,774 @@
+/* Тень блока
+  background-color: #f9f9f9;
+  box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.18);*/
+/* Обводка текста
+  color: rgb(14, 13, 13) !important;
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+.section {
+}
+.header__burger {
+  display: none;
+}
+
+/* Предзагрузка сайта  */
+#p_prldr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #9a12b3;
+  z-index: 30;
+}
+
+.contpre small {
+  font-size: 25px;
+}
+
+.contpre {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  margin-left: -125px;
+  margin-top: -75px;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: -2px;
+  text-align: center;
+  line-height: 35px;
+}
+
+#p_prldr .svg_anm {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: url(../pic/oval.svg) center center no-repeat;
+  background-size: 41px;
+  margin: -16px 0 0 -16px;
+}
+/* Конец Предзагрузка сайта  */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+/*Scroll up buttom*/
+.scrollup {
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
+  position: fixed;
+  display: none;
+  bottom: 50px;
+  right: 100px;
+  text-indent: -9999px;
+  background-image: url(../pic/48.png);
+  background-repeat: no-repeat;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  animation-iteration-count: 20;
+}
+
+.block__name {
+  text-align: center;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}
+.block__name-title {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.block__name-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: gray;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.block__name-subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.main__header {
+  background-image: url(../pic/back3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* TOP Header  */
+
+.header {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 7;
+}
+.header__top {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgba(190, 190, 190, 1);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  align-items: center;
+}
+.header__topmenu ul {
+  display: flex;
+}
+.header__topmenu-link a {
+  color: black;
+  font-weight: 600;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.header__topmenu.active {
+  top: 0;
+  display: flex;
+  background-color: rgba(139, 138, 138, 0.8);
+}
+.header__top-contact {
+  z-index: 5;
+}
+.heder__contact-link {
+  padding: 0 20px;
+  position: relative;
+  color: black;
+  font-weight: 500;
+}
+/* Top header hover*/
+.heder__contact-link:hover,
+.header__topmenu-link a:hover,
+.header__social-link:hover {
+  animation: swing;
+  animation-duration: 2.5s;
+  color: #fff;
+}
+/* END Top header hover*/
+
+.heder__contact-link:nth-child(1)::before {
+  content: "\f095";
+  font-family: "icomoon";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.heder__contact-link:nth-child(2)::before {
+  content: "\f003";
+  font-family: "icomoon";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header__top-social {
+}
+.header__social-link {
+}
+.header__social-img {
+  width: 20px;
+}
+
+/*Header Content*/
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.header__content-logo {
+  margin: 100px auto 30px auto;
+}
+.header__logo-img {
+}
+.header__content-block {
+  display: inline-block;
+  padding: 7px 15px;
+  margin: 20px auto;
+  background-color: RGBA(240, 241, 242, 0.3);
+  border-radius: 20px;
+}
+.header__content-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(14, 13, 13);
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+  text-transform: uppercase;
+  
+}
+
+.header__content-text {
+  text-align: center;
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff;
+  }
+
+/* Header slider */
+.header__slider {
+}
+.slider__items {
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Info Block*/
+
+.main__info {
+  background-color: #e3e3e3;
+}
+
+.info__block {
+  padding-bottom: 25px;
+}
+.info__block-row {
+  display: flex;
+}
+.info__block-items {
+  display: flex;
+  max-width: 50%;
+  margin-top: 20px;
+}
+.info__block-img {
+}
+.block__img {
+  max-width: 130px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.info__block-text {
+  text-align: center;
+}
+.info__block-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.info__block-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+/*Product Block*/
+
+.product__block {
+  padding-bottom: 20px;
+}
+.product__items {
+  display: flex;
+  background-color: #e8ece9;
+  border-radius: 7px;
+  margin: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 7px 24.3px 2.7px rgba(100, 96, 96, 0.78);
+}
+.product__items:nth-child(2) {
+  position: relative;
+  left: 20%;
+}
+.product__items:nth-child(3) {
+  position: relative;
+  left: 40%;
+}
+
+.product__item-img {
+  position: relative;
+}
+.product__item-img::after {
+  font-family: "icomoon";
+  content: "\e987";
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+
+.product__img {
+  max-width: 200px;
+  min-height: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+.product__img:hover {
+  border: 2px solid #a6a8a7;
+}
+/* Start увеличенная картинка */
+#magnify {
+  display: none;
+
+  /* position: absolute; upd: 24.10.2016 */
+  position: fixed;
+  max-width: 600px;
+  height: auto;
+  z-index: 9999;
+}
+
+#magnify img {
+  width: 100%;
+}
+
+/* затемняющий фон */
+#overlay {
+  display: none;
+
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  z-index: 9990;
+}
+
+/* кнопка закрытия */
+#close-popup {
+  width: 30px;
+  height: 30px;
+
+  background: #ffffff;
+  border: 1px solid #afafaf;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#close-popup i {
+  width: 30px;
+  height: 30px;
+  background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+  background-size: 16px 16px;
+  display: block;
+}
+
+@keyframes rota {
+  25% {
+    transform: rotate(360deg);
+  }
+}
+
+#close-popup:hover {
+  animation: rota 4s infinite normal;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Finnish увеличенная картинка */
+
+.product__content {
+  text-align: center;
+  padding: 10px;
+}
+.product__content-title {
+  margin-top: 7px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.product__cont-spec {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.product__cont-spec::after {
+  font-family: "icomoon";
+  content: "\e900";
+  font-size: 18px;
+}
+
+.product__content-text {
+  margin-top: 7px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Find_Block */
+.find {
+  position: relative;
+}
+
+.find::before {
+  content: "";
+  background-image: url(../pic/prirod.jpg);
+  background-size: cover;
+  position: absolute;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.find__inner {
+  display: flex;
+}
+.find__content {
+  text-align: center;
+  position: relative;
+}
+.find__content-text {
+  padding: 15%;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.find__map-bel svg {
+  max-width: 700px;
+  margin-left: 1px;
+}
+.find__content-slider {
+  display: flex;
+  justify-items: center;
+
+  max-width: 500px;
+  margin: auto;
+}
+
+.find__content-slider img {
+}
+/*Review Block*/
+
+.rev__inner {
+}
+.rev__items {
+  display: flex;
+}
+.rev__item {
+  max-width: 33.333%;
+  min-height: 210px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.18);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 7px;
+}
+.rev__item-header {
+  display: flex;
+  justify-content: center;
+}
+.rev__item-header::before {
+  font-family: "icomoon";
+  content: "\f10e";
+  font-size: 35px;
+  color: gray;
+  margin: 5px 0;
+}
+.rev__item-text {
+  text-align: center;
+  font-size: 14px;
+  min-height: 85px;
+}
+.rev__item-stars {
+  display: flex;
+  justify-content: center;
+}
+.rev__item-stars img {
+  width: 15px;
+  height: 15px;
+  margin: 5px 0;
+}
+.rev__item-name {
+  text-align: center;
+  font-size: 12px;
+}
+.rev_text {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+/*About Block*/
+
+.about {
+  position: relative;
+}
+
+.about__inner {
+  display: flex;
+}
+.about__video {
+}
+.about__video-link {
+  width: 600px;
+}
+.about__content {
+  padding-left: 20px;
+  padding-top: 15px;
+  text-align: center;
+  position: relative;
+}
+.about__content::before {
+  content: "";
+  background-image: url(../pic/logo.png);
+  background-position: 90%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.1;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.about__text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 0.7px;
+}
+.about__btn {
+  padding: 10px;
+  color: blue;
+  border-radius: 7px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.about__btn a {
+  font-weight: 500;
+  background: yellow;
+  padding: 10px;
+  color: blue;
+  border-radius: 7px;
+  animation: flash;
+  animation-duration: 2.5s;
+  animation-iteration-count: 4;
+}
+.about__btn:hover {
+  animation: swing;
+  animation-duration: 2.5s;
+}
+
+/*Contact Block*/
+
+.contact {
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact::before {
+  content: "";
+  background-image: url(../pic/way.jpg);
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+}
+.contact__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__map-block {
+  overflow: hidden;
+  max-width: 50%;
+
+  position: relative;
+}
+.contact__map-map iframe {
+}
+
+.contact__content-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  max-width: 50%;
+}
+.contact__info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.contact__content-time {
+  margin: 10px 15px;
+}
+.contact__content-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.content__time-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.content__time-text p::before {
+  font-family: "icomoon";
+  content: "\f017";
+  font-size: 20px;
+  margin-right: 7px;
+}
+.contact__content-contact {
+  margin: 15px 15px;
+}
+.content__contact-text {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+.content__contact-text a {
+  margin: 7px 0;
+  color: black;
+}
+.content__contact-text a::before {
+  font-family: "icomoon";
+  content: "\f095";
+  font-size: 20px;
+  margin-right: 7px;
+}
+.content__contact-text a:nth-last-child(1)::before {
+  font-family: "icomoon";
+  content: "\f003";
+  font-size: 20px;
+  margin-right: 7px;
+}
+.content__contact-text a:hover {
+  animation: swing;
+  animation-duration: 2.5s;
+}
+
+.contact__adress {
+  text-align: center;
+}
+
+.contact__adress-text {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 15px 15px;
+}
+.contact__adress-text p::before {
+  font-family: "icomoon";
+  content: "\f041";
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.contact__content-bank {
+  padding-left: 40px;
+  text-align: center;
+}
+.content__bank-text {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 15px 15px;
+}
+
+/*Footer*/
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  line-height: 25px;
+  background-color: #c8c9c6;
+}
+
+/*animation_map*/
+
+.min,
+.min_pnt {
+  animation: pulse;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.gro,
+.gro_pnt {
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.bre,
+.bre_pnt {
+  animation: fadeOut;
+  animation-duration: 3s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.gom,
+.gom_pnt {
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.vit,
+.vit_pnt {
+  animation: fadeOut;
+  animation-duration: 3s;
+  animation-delay: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.mog,
+.mog_pnt {
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
